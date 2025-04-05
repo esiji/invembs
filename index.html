@@ -27,36 +27,35 @@
       margin-bottom: 0;
     }
     h2{
-      font-size: 16px;
+      font-size: 13px;
       margin-top: 0;
     }
     main {
       padding: 2em 20vw;
       text-align: center;
-      margin-bottom: 30vh;
+      margin-bottom: 45vh;
     }
     .form-container {
-      background: white;
-      padding: 2em;
-      border-radius: 8px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 320px;
+      max-width: 400px;
+      margin: auto;
+      font-family: Arial, sans-serif;
     }
-
-    .form-container label {
-      display: block;
-      margin-bottom: 0.5em;
-      font-weight: bold;
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1em;
     }
-
-    .form-container input {
-      width: 100%;
-      padding: 0.75em;
-      margin-bottom: 1.5em;
+    .form-group label {
+      flex: 0 0 100px; /* fixed width for label */
+      margin-right: 10px;
+    }
+    .form-group input {
+      flex: 1;
+      padding: 0.6em;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
+
     footer {
       background: #ffffff;
       color: #6F6F6E;
@@ -89,11 +88,15 @@
   </header>
   <main>
     <form>
-      <label for="username">USERNAME</label>
-      <input type="text" id="username" name="username" required />
+      <div class="form-group">
+        <label for="username">USERNAME</label>
+        <input type="text" id="username" name="username" required />
+      </div>
 
-      <label for="login">PASSWORD</label>
-      <input type="password" id="password" name="password" required />
+      <div class="form-group">
+        <label for="password">PASSWORD</label>
+        <input type="password" id="password" name="password" required />
+      </div>
 
       <button id="sign-in" class="sign-in-btn" type="submit" disabled>LOG IN</button>
     </form>
